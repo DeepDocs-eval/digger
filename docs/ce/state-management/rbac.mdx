@@ -7,7 +7,7 @@ Role Based Access Control
 Notes
 - Available only when using bucket storage (not in-memory).
 
-OpenTaco includes a comprehensive RBAC system that allows you to control access to Terraform states based on user roles and permissions. The RBAC system is only available when using S3 storage (not in-memory storage).
+OpenTaco includes a comprehensive RBAC system that allows you to control access to Terraform states based on user roles and permissions. The RBAC system is only available when using bucket storage (not in-memory storage).
 
 ## Overview
 
@@ -92,10 +92,10 @@ taco rbac user assign admin@example.com admin
 
 ```bash
 # Test if a user can lock a specific unit
-taco rbac test john.doe@example.com lock dev/myapp
+taco rbac test john.doe@example.com unit.lock dev/myapp
 
-# Test if a user can push to a unit
-taco rbac test john.doe@example.com unit push myapp/prod
+# Test if a user can write to a unit
+taco rbac test john.doe@example.com unit.write myapp/prod
 ```
 
 ## Permission Rules
