@@ -15,7 +15,7 @@ modules/
 ```
 
 <Note>
-    Patterns starting with `.` (e.g., `./modules/**` or `../modules/**`) are resolved relative to the **project directory**. All other patterns are resolved relative to the **digger.yml location**.
+    All patterns are resolved relative to the **project directory**. Use `../` or similar to reference paths outside the project (relative to digger.yml).
 </Note>
 
 If you wanted to trigger plans for all `modules/` folder in both dev and prod projects you would include them in the `include_patterns` key. Similarly you put anything which you want to ignore in the `exclude_patterns` key ( exclude takes precedence over includes).
